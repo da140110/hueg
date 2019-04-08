@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hueg/pages/mainPage.dart';
 import 'package:hueg/pages/authPage.dart';
+//import 'package:hueg/pages/loginPage.dart';
 import 'package:flutter/services.dart';
 import 'package:scoped_model/scoped_model.dart';
 import './scoped-models/main.dart';
+import './pages/phananh/xulyphananh/trangchuXuLyPhanAnh.dart';
+import './pages/phananh/xulyphananh/chitietXuLyPhanAnh.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -42,17 +45,31 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
           '/mainpage': (BuildContext context) => MainPage(_model),
-          //'/admin': (BuildContext context) => ProductsAdminPage(_model),
+          //'/xulyphananh': (BuildContext context) => ProductsAdminPage(_model),
         },
         onGenerateRoute: (RouteSettings settings) {
           final List<String> pathElements = settings.name.split('/');
           if (pathElements[0] != '') {
             return null;
           }
-          if (pathElements[1] == 'hoso') {
+          if (pathElements[1] == 'xulyphananh') {
+            String phananhid = '';
+            try {
+                phananhid=pathElements[2];
+            }
+            catch(e)
+            {
+
+            }
+
+            if (phananhid=='')
             return MaterialPageRoute<bool>(
-              builder: (BuildContext context) => MainPage(_model),
+              builder: (BuildContext context) => TrangChuXuLyPhanAnh(model: _model),
             );
+            else
+              {
+                //chitietXyLyPhanAnh
+              }
           }
           return null;
         },

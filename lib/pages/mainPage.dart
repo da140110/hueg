@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './authPage.dart';
 import 'package:hueg/pages/about.dart';
-import 'package:hueg/pages/contact.dart';
+import 'package:hueg/pages/contact/contact.dart';
 import 'package:hueg/pages/homePage.dart';
 import 'package:hueg/pages/notification.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -75,15 +75,14 @@ class MainPageState extends State<MainPage> {
             leading: new Icon(Icons.book),
             title: new Text('Danh bạ đơn vị'),
             onTap: () {
-
               Navigator.pop(context);
+
             },
           ),
           new ListTile(
             leading: new Icon(Icons.notifications),
             title: new Text('Thông báo'),
             onTap: () {
-
               Navigator.pop(context);
             },
           ),
@@ -91,7 +90,6 @@ class MainPageState extends State<MainPage> {
             leading: new Icon(Icons.settings),
             title: new Text('Tin nội bộ'),
             onTap: () {
-
               Navigator.pop(context);
             },
           ),
@@ -136,17 +134,6 @@ class MainPageState extends State<MainPage> {
                 new Tab(icon: new Icon(Icons.contacts), text: "Banh bạ")
               ]
           ),
-//          bottomNavigationBar: FancyBottomNavigation(
-//            tabs: [
-//              TabData(iconData: Icons.home, title: "Home"),
-//              TabData(iconData: Icons.search, title: "Search"),
-//              TabData(iconData: Icons.shopping_cart, title: "Basket"),
-//              TabData(iconData: Icons.shopping_cart, title: "Basket")
-//            ],
-//            onTabChangedListener: (position) {
-//
-//            },
-//
         ),
         appBar: new AppBar(
           backgroundColor: Colors.blueAccent,
@@ -154,7 +141,7 @@ class MainPageState extends State<MainPage> {
         ),
         body: new TabBarView(children: [
           new HomePage(),
-          new NotificationHueg(),
+          new DanhSachThongBaoPage(widget.model),
           new About(),
           new Contact(widget.model),
         ]),

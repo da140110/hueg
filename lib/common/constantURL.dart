@@ -1,3 +1,12 @@
-final BASE_URL = "https://user.thuathienhue.gov.vn/";
-final LOGIN_URL =  "https://user.thuathienhue.gov.vn/api/AuthenToken/Login";
-final GET_CONTACT_URL="http://nhansu.thuathienhue.gov.vn/api/hoso/danhsach?tukhoa&MaDinhDanh=";
+const USERNAME_DEFAULT = "ttthhc";
+const PASSWORD_DEFAULT = "Abc@12345";
+const BASE_URL = "https://user.thuathienhue.gov.vn/";
+const LOGIN_URL =  "https://user.thuathienhue.gov.vn/api/AuthenToken/Login";
+const GET_CONTACT_URL="http://nhansu.thuathienhue.gov.vn/api/hoso/danhsach?tukhoa&MaDinhDanh=";
+const GET_CONTACT_DEPARTMENT_URL="http://nhansu.thuathienhue.gov.vn/api/danhsachdonvi";
+const GET_DANHSACH_CHOXULY_URL="https://tuongtac.thuathienhue.gov.vn/demo/xuly/choxuly?page=1&perpage=50&search=";
+const POST_XULYPHANANH_XULY="https://tuongtac.thuathienhue.gov.vn/demo/xuly/ketqua";
+const POST_XULYPHANANH_TRABUOCTRUOC="https://tuongtac.thuathienhue.gov.vn/demo/xuly/trabuoctruoc";
+const GET_CHITIET_PHANANH_URL="https://tuongtac.thuathienhue.gov.vn/demo/xuly/chitiet/";
+const GET_DANHSACH_TRAODOI_PHANANH_URL="https://tuongtac.thuathienhue.gov.vn/demo/xuly/nhatky/";
+const GET_DANHSACH_THONGBAO_URL="https://tuongtac.thuathienhue.gov.vn/demo/phananh/thongbao/hueg?page=1&perpage=50&search=";
